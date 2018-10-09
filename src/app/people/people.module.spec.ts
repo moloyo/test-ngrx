@@ -1,13 +1,13 @@
-import { AppMainModule } from './app-main.module';
+import { PeopleModule } from './people.module';
 
-describe('AppMainModule', () => {
-  let appMainModule: AppMainModule;
+describe('PeopleModule', () => {
+  let peoplenModule: PeopleModule;
 
   beforeEach(() => {
-    appMainModule = new AppMainModule();
+    peoplenModule = new PeopleModule();
   });
 
   it('should create an instance', () => {
-    expect(appMainModule).toBeTruthy();
+    expect(peoplenModule).toBeTruthy();
   });
 });

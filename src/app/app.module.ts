@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { AppMainModule } from './app-main/app-main.module';
-import { ReduxCoreModule } from './redux-core/redux-core.module';
+import { PeopleModule } from './people/people.module';
+import { StoreModule } from '@ngrx/store';
+import { peopleReducer } from './reducers/people.reducer';
 
 @NgModule({
   declarations: [
@@ -11,10 +11,12 @@ import { ReduxCoreModule } from './redux-core/redux-core.module';
   ],
   imports: [
     BrowserModule,
-    AppMainModule,
-    ReduxCoreModule
+    PeopleModule,
+    StoreModule.forRoot({
+      people: peopleReducer,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }

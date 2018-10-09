@@ -1,0 +1,9 @@
+<div>
+  <label for="nombre">Nombre</label>
+  <input type="text" id="nombre" [value]="currentPerson?.nombre" #nombre>
+  <label for="apellido">Apellido</label>
+  <input type="text" id="apellido" [value]="currentPerson?.apellido" #apellido>
+  <input type="button" (click)="addPerson(nombre.value, apellido.value)" [value]="currentPerson !== undefined ? 'Editar' : 'Agregar'">
+  <input type="button" *ngIf="currentPerson" (click)="delPerson()" value="Eliminar">
+</div>
+

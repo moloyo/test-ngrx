@@ -1,3 +1,7 @@
-<p>
-  people-list works!
-</p>
+<div>
+  <ul>
+    <li *ngFor="let person of peopleList; index as i " (click)="selectPerson(i)" [ngClass]="{'selected': selectedID === i}">
+      {{ person.nombre }} {{ person.apellido }}
+    </li>
+  </ul>
+</div>
